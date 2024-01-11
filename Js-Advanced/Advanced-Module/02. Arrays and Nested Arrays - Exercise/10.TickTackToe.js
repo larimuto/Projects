@@ -73,7 +73,7 @@ function tickTak(array) {
       curPlayer++;
     } else {
       curPlayer += 2;
-      moves++;
+      
       console.log("This place is already taken. Please choose another!");
       continue;
     }
