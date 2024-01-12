@@ -1,28 +1,23 @@
 function tickTak(text) {
+  text = text.split(" ")
+  let result = ""
   
-  for (let element of text.split(" ")) {
-   element = element.split("")
-    element = element.map((x ) =>{
-      let 
+  
+  for (const element of text) {
+         let  start = element[0].toUpperCase()
+          
+        let end = element.slice(1).split("").map(x=>x.toLowerCase()).join("")
+      result += start.concat(end)+" "
+         
+  }
 
 
 
 
+str = result[0].toLowerCase()
+end = result.slice(1)
 
-
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    )
-
-
-
+return str.concat(end)
 }
-  tickTak('Hello Hhere' )
+
+  tickTak('HeLlo d DAD ASd 2131331 x re' )
