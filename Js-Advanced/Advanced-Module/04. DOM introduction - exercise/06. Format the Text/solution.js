@@ -1,53 +1,9 @@
-// function solve() {
-//   let text = document.getElementById("input").value;
-//   let output = document.getElementById("output");
-//   // split thext into paragraphs
-//   let finalText = text.split(".");
-//   //  add counter for the while
-//   let counter = finalText.length - 1;
-//   if(finalText.length === 0){ return 0}
-
-//   while (counter > 0) {
-//     // find the current itteration of the  while
-//     let index = finalText.length - 1 - counter;
-//     //  add paragraph and chck for the second and third entry  if they are != undefind , use ternary
-//     output.innerHTML += `<p> ${finalText[index]+"||||||||||||||"}${
-//       finalText[index + 1] != undefined ? finalText[index + 1]+"||||||" : ``
-//     } ${finalText[index + 2] != undefined ? finalText[index + 2]+"||||||" : `` }</p>`;
-//     // always have 1 on your mind
-//     counter -= 3;
-//   }debugger
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function solve() {
   let text = document.getElementById("input").value;
   let output = document.getElementById("output");
   // split thext into paragraphs
   let finalText = text.split(".")
+  // remove the  line brake from the  end of the string to not  abjust it along.
   finalText.pop()
   //  add counter for the while
   let counter = finalText.length - 1;
