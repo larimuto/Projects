@@ -1,7 +1,16 @@
-function generateReport(array) {
+function calculation(cdays,chours,cminutes,cseconds) {
+    days = cseconds / 60 / 60 / 24 + (cminutes * 60) / 24 + chours / 24 + cdays;
+    hours = (days * 24) + (cminutes / 60) + (cseconds / 60 / 60 ) + chours;
+    minutes = cdays * 24 * 60 + chours / 60 + cseconds / 60 + cminutes;
+    seconds =
+      cseconds + cminutes / 60 + chours / 60 / 60 + cdays * 24 * 60 * 60;
 
-console.log(array);
 
+
+
+console.log(minutes);
 
 }
-  generateReport([{"Employee":"Poole, Tracy"},{"Employee":"Ramos, Jan"},{"Employee":"Jennings, Gary"},{"Employee":"Ortega, Jeffrey"},{"Employee":"Shields, Robert"},{"Employee":"Gregory, Jon"},{"Employee":"Sheppard, Curtis"},{"Employee":"Williamson, Sumed"},{"Employee":"Moreno, Chris"},{"Employee":"Munoz, Michael"},{"Employee":"Kirby, Michael"},{"Employee":"Jenkins, Scott"},{"Employee":"Ross, Janice"},{"Employee":"Kelley, Nancy"},{"Employee":"Blackwell, Brandon"},{"Employee":"Bowers, Tammy"},{"Employee":"Fleming, Irv"},{"Employee":"Skinner, Jason"},{"Employee":"Wade, Kevin"},{"Employee":"Barrett, John"}])
+ 
+
+calculation(24,0,0,0);
