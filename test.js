@@ -1,16 +1,30 @@
-function calculation(cdays,chours,cminutes,cseconds) {
-    days = cseconds / 60 / 60 / 24 + (cminutes * 60) / 24 + chours / 24 + cdays;
-    hours = (days * 24) + (cminutes / 60) + (cseconds / 60 / 60 ) + chours;
-    minutes = cdays * 24 * 60 + chours / 60 + cseconds / 60 + cminutes;
-    seconds =
-      cseconds + cminutes / 60 + chours / 60 / 60 + cdays * 24 * 60 * 60;
+function solve() {
+    return function (argument) {
+            return argument
+                };
+  }
+  
+  let manager = solve();
+  console.log(manager("restock flavour 50")); // Success
+  console.log(manager("prepare lemonade 4"));
 
 
 
 
-console.log(minutes);
+        
+for (const element in recepie[currentProduct]) {
+  
+    // check if  all ingr are  in stock for the current  recepie
+    if(recepie[currentProduct][element] * currentQty > stock[element]){
+        return `Error: not enough ${element } in stock`
+    }
+    
+
 
 }
- 
 
-calculation(24,0,0,0);
+// removes the  recepies quantities from stock
+stock.protein -= (recepie[currentProduct].protein || 0 ) * currentQty ;
+    stock.carbohydrate -= (recepie[currentProduct].carbohydrate || 0) * currentQty ;
+    stock.fat -= (recepie[currentProduct].fat || 0* currentQty) ;
+    stock.flavour -= (recepie[currentProduct].flavour || 0 ) *  currentQty ;
