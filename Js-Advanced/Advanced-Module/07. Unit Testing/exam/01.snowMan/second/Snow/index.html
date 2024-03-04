@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/css/styles.css" />
+
+    <title>Snow Showdown</title>
+  </head>
+
+  <body class="body" id="body">
+    <h1>Snow Showdown</h1>
+    <main id="hero">
+      <div class="snowman-container">
+        <form class="snowman" action="" id="snowman">
+          <input type="text" id="snowman-name" placeholder="Snowman Name" />
+          <input
+            type="number"
+            id="snowman-height"
+            placeholder="Height (in centimeters)" />
+          <input type="text" id="location" placeholder="Location" />
+          <input type="text" id="creator-name" placeholder="Creator" />
+          <select id="special-attribute" placeholder="Special Attribute">
+            <option value="" disabled selected>Special Attribute</option>
+            <option value="Carrot Nose">Carrot Nose</option>
+            <option value="Hat/Pot">Hat/Pot</option>
+            <option value="Branches for Arms">Branches for Arms</option>
+            <option value="Button Eyes">Button Eyes</option>
+          </select>
+          <button
+            id="SubmitBtn"
+            onclick="myFunction('snowman-preview')"
+            type="submit"
+            class="add-btn">
+            Add
+          </button>
+        </form>
+      </div>
+      <div class="snowballs-container">
+        <div class="snowball">
+          <h2>&#10053;Snowman Preview&#10053;</h2>
+          <ul
+            style="display: none"
+            class="snowman-preview"
+            id="snowman-preview">
+            <li>
+              <article>
+                <p id="Height">Height&nbsp;</p>
+                <p id="Name">Name&nbsp;</p>
+                <p id="Location">Location&nbsp;</p>
+                <p id="Creator">Creator&nbsp;</p>
+                <p id="Attribute">Attribute&nbsp;</p>
+              </article>
+            </li>
+            <div class="=btn-container">
+              <button id="EditBtn" class="edit-btn">Edit</button>
+              <button id="NextBtn" class="next-btn">Next</button>
+            </div>
+          </ul>
+        </div>
+        <div class="snow">
+          <h2>&#10053;Your Snowman&#10053;</h2>
+
+          <ul style="display: none" class="snow-list" id="snow-list">
+            <li class="snowman-content">
+              <article style="display: block">
+                <p id="SubmitName">Height&nbsp;</p>
+                <p id="SubmitHeight">Name&nbsp;</p>
+                <p id="SubmitLocation">Location&nbsp;</p>
+                <p id="SubmitCreator">Creator&nbsp;</p>
+                <p id="SubmitAttribute">Attribute&nbsp;</p>
+                <button id="SendBtn" class="send-btn">Send</button>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+    <img id="back-img" src="./style/images/back-Snowman.png" alt="" hidden />
+  </body>
+</html>
